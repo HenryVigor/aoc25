@@ -12,9 +12,8 @@ int main() {
     std::string line;
     int dial = 50;
     int zeros = 0;
-    while (!file.eof()) {
+    while (std::getline(file, line)) {
         bool fromZero = dial == 0;
-        std::getline(file, line);
         char dir = line[0];
         int delta = std::stoi(line.substr(1, line.size() - 1));
 

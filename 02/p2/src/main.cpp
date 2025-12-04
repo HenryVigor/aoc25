@@ -11,8 +11,7 @@ int main() {
 
     std::string range;
     long idSum = 0;
-    while (!file.eof()) {
-        std::getline(file, range, ',');
+    while (std::getline(file, range, ',')) {
         int dashPos = range.find('-');
         if (dashPos == std::string::npos) continue;
 

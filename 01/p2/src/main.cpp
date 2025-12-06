@@ -15,7 +15,7 @@ int main() {
     while (std::getline(file, line)) {
         bool fromZero = dial == 0;
         char dir = line[0];
-        int delta = std::stoi(line.substr(1, line.size() - 1));
+        int delta = std::stoi(line.substr(1));
 
         dial = dir == 'R' ? dial + delta : dial - delta;
 
